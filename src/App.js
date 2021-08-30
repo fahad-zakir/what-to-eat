@@ -1,3 +1,6 @@
+import React, { useState, useEffect } from 'react';
+
+const API_URL = ``;
 
 function App() {
   return (
