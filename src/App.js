@@ -4,6 +4,17 @@ const API_URL = `https://api.spoonacular.com/food/products/search?query=yogurt&a
 console.log(API_URL)
 
 function App() {
+  const [menuItem, setMenuItem] = useState('');
+  const fetchMenuItem = () => {
+    fetch(API_URL)
+    .then(res => res.json())
+    .then(data => setMenuItem(data.products.menuItem))
+  }
+
+  useEffect(() => {
+    fetchMenuItem();
+  }, [])
+
   return (
     <div className="search">
         <h3>What to eat</h3>
