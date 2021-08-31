@@ -5,7 +5,7 @@ console.log(API_URL)
 
 function App() {
   return (
-    <div className="App">
+    <div className="search">
         <h3>What to eat</h3>
     </div>
   );
